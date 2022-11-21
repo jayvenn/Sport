@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Match: Decodable {
+public struct Match: Decodable, Hashable {
     public let date: Date
     public let description: String
     public let home: String
