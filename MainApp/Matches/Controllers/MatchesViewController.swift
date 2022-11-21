@@ -45,3 +45,8 @@ final class MatchesViewController: UIViewController {
         .store(in: &anyCancellables)
     }
 }
+// MARK: - MatchesUIHandler
+extension MatchesViewController: MatchesUIHandler {
+    func getAllUIs() {
+    }
+}

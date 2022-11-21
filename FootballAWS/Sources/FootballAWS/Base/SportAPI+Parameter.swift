@@ -1,6 +1,6 @@
 import Foundation
 
-public extension SportAPI {
+public extension FootballAWS {
     enum Parameter: String {
         case username
         case password

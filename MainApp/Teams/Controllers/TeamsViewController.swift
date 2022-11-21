@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class TeamsViewController: UIViewController {
+final class TeamsViewController: UIViewController {
     // MARK: - Properties
     private let viewModel: TeamsViewModel
     private var anyCancellables = Set<AnyCancellable>()
@@ -25,4 +25,8 @@ class TeamsViewController: UIViewController {
         super.viewDidLoad()
         viewModel.fetchMatches()
     }
+}
+// MARK: - TeamsUIHandler
+extension TeamsViewController: TeamsUIHandler {
+    
 }

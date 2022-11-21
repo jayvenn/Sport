@@ -7,7 +7,7 @@
 
 import Combine
 import FootballCore
-import SportAPI
+import FootballAWS
 
 final class MatchesViewModel {
     // MARK: - Properties

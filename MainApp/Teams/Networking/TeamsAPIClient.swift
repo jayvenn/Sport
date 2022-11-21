@@ -7,10 +7,10 @@
 
 import Combine
 import FootballCore
-import SportAPI
+import FootballAWS
 
 final class TeamsAPIClient: TeamsFetchable {
     func getTeams() -> AnyPublisher<TeamsAPIResponse, Error> {
-        SportAPI.shared.makeUnauthenticatedPublisher(path: .teams)
+        FootballAWS.shared.makeUnauthenticatedPublisher(path: .teams)
     }
 }

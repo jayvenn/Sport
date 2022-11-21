@@ -1,6 +1,6 @@
 import Foundation
 
-public extension SportAPI {
+public extension FootballAWS {
     enum Path: Hashable {
         case teams
         case matches

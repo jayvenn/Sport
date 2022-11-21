@@ -28,6 +28,7 @@ final class MainTabBarController: UITabBarController {
             )
         ]
     }
+    // MARK: - Helpers
     private func makeNavigationController(
         _ viewController: UIViewController,
         title: String,
