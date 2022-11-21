@@ -68,7 +68,7 @@ public final class SportAPI {
                 }
                 let jsonDecoder = JSONDecoder()
                 jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                jsonDecoder.dateDecodingStrategy = .iso8601
+                jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
                 let value = try jsonDecoder.decode(T.self, from: result.data)
                 return value
             }
@@ -137,3 +137,9 @@ public final class SportAPI {
         request.setValue(authorizationValue, forHTTPHeaderField: "Authorization")
     }
 }
+
+private let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+    return dateFormatter
+}()

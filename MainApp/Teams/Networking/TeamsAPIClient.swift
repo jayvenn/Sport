@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Football
 import SportAPI
 
 final class TeamsAPIClient: TeamsFetchable {

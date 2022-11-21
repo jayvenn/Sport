@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Football
 
 protocol TeamsFetchable {
     func getTeams() -> AnyPublisher<[Team], Error>

@@ -6,13 +6,14 @@
 //
 
 import Combine
+import Football
 import SportAPI
 
 final class MatchesViewModel {
     // MARK: - Properties
     private var anyCancellables = Set<AnyCancellable>()
     private let apiClient: MatchesFetchable
-    let matchesSubject = PassthroughSubject<[Match], Error>()
+    let matchesSubject = PassthroughSubject<MatchesAPIResponse, Error>()
     // MARK: - Init
     init(apiClient: MatchesFetchable = MatchesAPIClient()) {
         self.apiClient = apiClient
@@ -26,8 +27,8 @@ final class MatchesViewModel {
             case .failure(let error):
                 self?.matchesSubject.send(completion: .failure(error))
             }
-        } receiveValue: { [weak self] matches in
-            self?.matchesSubject.send(matches)
+        } receiveValue: { [weak self] response in
+            self?.matchesSubject.send(response)
         }
         .store(in: &anyCancellables)
     }
