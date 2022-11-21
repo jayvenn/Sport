@@ -7,7 +7,7 @@
 
 import Combine
 import SportAPI
-import Football
+import FootballCore
 
 final class MatchesAPIClient: MatchesFetchable {
     func getMatches() -> AnyPublisher<MatchesAPIResponse, Error> {

@@ -6,7 +6,7 @@
 //
 
 import Combine
-import Football
+import FootballCore
 
 protocol TeamsFetchable {
     func getTeams() -> AnyPublisher<TeamsAPIResponse, Error>

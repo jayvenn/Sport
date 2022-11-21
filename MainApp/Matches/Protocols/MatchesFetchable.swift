@@ -6,7 +6,7 @@
 //
 
 import Combine
-import Football
+import FootballCore
 
 protocol MatchesFetchable {
     func getMatches() -> AnyPublisher<MatchesAPIResponse, Error>

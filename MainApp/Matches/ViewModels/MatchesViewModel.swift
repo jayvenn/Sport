@@ -6,7 +6,7 @@
 //
 
 import Combine
-import Football
+import FootballCore
 import SportAPI
 
 final class MatchesViewModel {

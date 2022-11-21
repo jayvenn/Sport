@@ -42,4 +42,3 @@ public extension SportAPI {
         case post = "POST"
     }
 }
-

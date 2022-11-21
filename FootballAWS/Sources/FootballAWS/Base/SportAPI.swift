@@ -58,9 +58,6 @@ public final class SportAPI {
                     if let message = json["message"] as? String {
                         throw NetworkError.statusCode(code: statusCode, message: message)
                     }
-                    if let error = json["error"] as? String {
-                        throw NetworkError.statusCode(code: statusCode, message: error)
-                    }
                     throw NetworkError.statusCode(code: statusCode)
                 }
                 guard !result.data.isEmpty else {
