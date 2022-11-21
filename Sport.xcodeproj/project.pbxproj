@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		192A7A1A292B3C310076B1A7 /* Sport.docc in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A19292B3C310076B1A7 /* Sport.docc */; };
-		192A7A20292B3C310076B1A7 /* Sport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A15292B3C310076B1A7 /* Sport.framework */; };
+		192A7A20292B3C310076B1A7 /* SportData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A15292B3C310076B1A7 /* SportData.framework */; };
 		192A7A26292B3C310076B1A7 /* Sport.h in Headers */ = {isa = PBXBuildFile; fileRef = 192A7A18292B3C310076B1A7 /* Sport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		192A7A31292B3C3A0076B1A7 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A2F292B3C3A0076B1A7 /* Team.swift */; };
 		192A7A32292B3C3A0076B1A7 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A30292B3C3A0076B1A7 /* Match.swift */; };
@@ -24,11 +24,11 @@
 		192A7A73292B47A80076B1A7 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A72292B47A80076B1A7 /* TeamsViewController.swift */; };
 		192A7A76292B4ACA0076B1A7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 192A7A75292B4ACA0076B1A7 /* SDWebImage */; };
 		192A7A80292B4BC80076B1A7 /* SportAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A7F292B4BC80076B1A7 /* SportAPI.docc */; };
-		192A7A86292B4BC80076B1A7 /* SportAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */; };
+		192A7A86292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */; };
 		192A7A8D292B4BC80076B1A7 /* SportAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A8C292B4BC80076B1A7 /* SportAPITests.swift */; };
 		192A7A8E292B4BC80076B1A7 /* SportAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 192A7A7E292B4BC80076B1A7 /* SportAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		192A7A91292B4BC80076B1A7 /* SportAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */; };
-		192A7A92292B4BC80076B1A7 /* SportAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		192A7A91292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */; };
+		192A7A92292B4BC80076B1A7 /* SportDataAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		192A7AA5292B4C260076B1A7 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A9C292B4C260076B1A7 /* ResponseError.swift */; };
 		192A7AA6292B4C260076B1A7 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A9D292B4C260076B1A7 /* AuthenticationError.swift */; };
 		192A7AA7292B4C260076B1A7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A9E292B4C260076B1A7 /* NetworkError.swift */; };
@@ -85,7 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				192A7A92292B4BC80076B1A7 /* SportAPI.framework in Embed Frameworks */,
+				192A7A92292B4BC80076B1A7 /* SportDataAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,10 +93,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		192A7A15292B3C310076B1A7 /* Sport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		192A7A15292B3C310076B1A7 /* SportData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SportData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192A7A18292B3C310076B1A7 /* Sport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sport.h; sourceTree = "<group>"; };
 		192A7A19292B3C310076B1A7 /* Sport.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Sport.docc; sourceTree = "<group>"; };
-		192A7A1F292B3C310076B1A7 /* SportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		192A7A1F292B3C310076B1A7 /* SportDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192A7A2F292B3C3A0076B1A7 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		192A7A30292B3C3A0076B1A7 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		192A7A33292B3C630076B1A7 /* SportTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SportTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,10 +113,10 @@
 		192A7A67292B45F60076B1A7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		192A7A6E292B478A0076B1A7 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		192A7A72292B47A80076B1A7 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
-		192A7A7C292B4BC80076B1A7 /* SportAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SportAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SportDataAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192A7A7E292B4BC80076B1A7 /* SportAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportAPI.h; sourceTree = "<group>"; };
 		192A7A7F292B4BC80076B1A7 /* SportAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SportAPI.docc; sourceTree = "<group>"; };
-		192A7A85292B4BC80076B1A7 /* SportAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		192A7A85292B4BC80076B1A7 /* SportDataAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportDataAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192A7A8C292B4BC80076B1A7 /* SportAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportAPITests.swift; sourceTree = "<group>"; };
 		192A7A9C292B4C260076B1A7 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		192A7A9D292B4C260076B1A7 /* AuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192A7A20292B3C310076B1A7 /* Sport.framework in Frameworks */,
+				192A7A20292B3C310076B1A7 /* SportData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192A7A91292B4BC80076B1A7 /* SportAPI.framework in Frameworks */,
+				192A7A91292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192A7A86292B4BC80076B1A7 /* SportAPI.framework in Frameworks */,
+				192A7A86292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +182,8 @@
 		192A7A0B292B3C310076B1A7 = {
 			isa = PBXGroup;
 			children = (
-				192A7A17292B3C310076B1A7 /* Sport */,
-				192A7A23292B3C310076B1A7 /* SportTests */,
+				192A7A17292B3C310076B1A7 /* SportData */,
+				192A7A23292B3C310076B1A7 /* SportDataTests */,
 				192A7A7D292B4BC80076B1A7 /* SportAPI */,
 				192A7A8B292B4BC80076B1A7 /* SportAPITests */,
 				192A7A3F292B43110076B1A7 /* MainApp */,
@@ -195,17 +195,17 @@
 		192A7A16292B3C310076B1A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				192A7A15292B3C310076B1A7 /* Sport.framework */,
-				192A7A1F292B3C310076B1A7 /* SportTests.xctest */,
+				192A7A15292B3C310076B1A7 /* SportData.framework */,
+				192A7A1F292B3C310076B1A7 /* SportDataTests.xctest */,
 				192A7A3E292B43110076B1A7 /* MainApp.app */,
 				192A7A56292B43270076B1A7 /* MainAppTests.xctest */,
-				192A7A7C292B4BC80076B1A7 /* SportAPI.framework */,
-				192A7A85292B4BC80076B1A7 /* SportAPITests.xctest */,
+				192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */,
+				192A7A85292B4BC80076B1A7 /* SportDataAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		192A7A17292B3C310076B1A7 /* Sport */ = {
+		192A7A17292B3C310076B1A7 /* SportData */ = {
 			isa = PBXGroup;
 			children = (
 				192A7A30292B3C3A0076B1A7 /* Match.swift */,
@@ -213,17 +213,17 @@
 				192A7A18292B3C310076B1A7 /* Sport.h */,
 				192A7A19292B3C310076B1A7 /* Sport.docc */,
 			);
-			path = Sport;
+			path = SportData;
 			sourceTree = "<group>";
 		};
-		192A7A23292B3C310076B1A7 /* SportTests */ = {
+		192A7A23292B3C310076B1A7 /* SportDataTests */ = {
 			isa = PBXGroup;
 			children = (
 				192A7A34292B3C630076B1A7 /* MatchTests.swift */,
 				192A7A38292B3D130076B1A7 /* TeamTests.swift */,
 				192A7A33292B3C630076B1A7 /* SportTests-Bridging-Header.h */,
 			);
-			path = SportTests;
+			path = SportDataTests;
 			sourceTree = "<group>";
 		};
 		192A7A3F292B43110076B1A7 /* MainApp */ = {
@@ -425,9 +425,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		192A7A14292B3C310076B1A7 /* Sport */ = {
+		192A7A14292B3C310076B1A7 /* SportData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 192A7A29292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "Sport" */;
+			buildConfigurationList = 192A7A29292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "SportData" */;
 			buildPhases = (
 				192A7A10292B3C310076B1A7 /* Headers */,
 				192A7A11292B3C310076B1A7 /* Sources */,
@@ -438,17 +438,17 @@
 			);
 			dependencies = (
 			);
-			name = Sport;
+			name = SportData;
 			packageProductDependencies = (
 				192A7A75292B4ACA0076B1A7 /* SDWebImage */,
 			);
 			productName = Sport;
-			productReference = 192A7A15292B3C310076B1A7 /* Sport.framework */;
+			productReference = 192A7A15292B3C310076B1A7 /* SportData.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		192A7A1E292B3C310076B1A7 /* SportTests */ = {
+		192A7A1E292B3C310076B1A7 /* SportDataTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 192A7A2C292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "SportTests" */;
+			buildConfigurationList = 192A7A2C292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "SportDataTests" */;
 			buildPhases = (
 				192A7A1B292B3C310076B1A7 /* Sources */,
 				192A7A1C292B3C310076B1A7 /* Frameworks */,
@@ -459,9 +459,9 @@
 			dependencies = (
 				192A7A22292B3C310076B1A7 /* PBXTargetDependency */,
 			);
-			name = SportTests;
+			name = SportDataTests;
 			productName = SportTests;
-			productReference = 192A7A1F292B3C310076B1A7 /* SportTests.xctest */;
+			productReference = 192A7A1F292B3C310076B1A7 /* SportDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		192A7A3D292B43110076B1A7 /* MainApp */ = {
@@ -501,9 +501,9 @@
 			productReference = 192A7A56292B43270076B1A7 /* MainAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		192A7A7B292B4BC80076B1A7 /* SportAPI */ = {
+		192A7A7B292B4BC80076B1A7 /* SportDataAPI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPI" */;
+			buildConfigurationList = 192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPI" */;
 			buildPhases = (
 				192A7A77292B4BC80076B1A7 /* Headers */,
 				192A7A78292B4BC80076B1A7 /* Sources */,
@@ -514,14 +514,14 @@
 			);
 			dependencies = (
 			);
-			name = SportAPI;
+			name = SportDataAPI;
 			productName = SportAPI;
-			productReference = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */;
+			productReference = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		192A7A84292B4BC80076B1A7 /* SportAPITests */ = {
+		192A7A84292B4BC80076B1A7 /* SportDataAPITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPITests" */;
+			buildConfigurationList = 192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPITests" */;
 			buildPhases = (
 				192A7A81292B4BC80076B1A7 /* Sources */,
 				192A7A82292B4BC80076B1A7 /* Frameworks */,
@@ -533,9 +533,9 @@
 				192A7A88292B4BC80076B1A7 /* PBXTargetDependency */,
 				192A7A8A292B4BC80076B1A7 /* PBXTargetDependency */,
 			);
-			name = SportAPITests;
+			name = SportDataAPITests;
 			productName = SportAPITests;
-			productReference = 192A7A85292B4BC80076B1A7 /* SportAPITests.xctest */;
+			productReference = 192A7A85292B4BC80076B1A7 /* SportDataAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -587,12 +587,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				192A7A14292B3C310076B1A7 /* Sport */,
-				192A7A1E292B3C310076B1A7 /* SportTests */,
+				192A7A14292B3C310076B1A7 /* SportData */,
+				192A7A1E292B3C310076B1A7 /* SportDataTests */,
 				192A7A3D292B43110076B1A7 /* MainApp */,
 				192A7A55292B43270076B1A7 /* MainAppTests */,
-				192A7A7B292B4BC80076B1A7 /* SportAPI */,
-				192A7A84292B4BC80076B1A7 /* SportAPITests */,
+				192A7A7B292B4BC80076B1A7 /* SportDataAPI */,
+				192A7A84292B4BC80076B1A7 /* SportDataAPITests */,
 			);
 		};
 /* End PBXProject section */
@@ -714,7 +714,7 @@
 /* Begin PBXTargetDependency section */
 		192A7A22292B3C310076B1A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 192A7A14292B3C310076B1A7 /* Sport */;
+			target = 192A7A14292B3C310076B1A7 /* SportData */;
 			targetProxy = 192A7A21292B3C310076B1A7 /* PBXContainerItemProxy */;
 		};
 		192A7A5B292B43270076B1A7 /* PBXTargetDependency */ = {
@@ -724,7 +724,7 @@
 		};
 		192A7A88292B4BC80076B1A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 192A7A7B292B4BC80076B1A7 /* SportAPI */;
+			target = 192A7A7B292B4BC80076B1A7 /* SportDataAPI */;
 			targetProxy = 192A7A87292B4BC80076B1A7 /* PBXContainerItemProxy */;
 		};
 		192A7A8A292B4BC80076B1A7 /* PBXTargetDependency */ = {
@@ -734,7 +734,7 @@
 		};
 		192A7A90292B4BC80076B1A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 192A7A7B292B4BC80076B1A7 /* SportAPI */;
+			target = 192A7A7B292B4BC80076B1A7 /* SportDataAPI */;
 			targetProxy = 192A7A8F292B4BC80076B1A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1184,7 +1184,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		192A7A29292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "Sport" */ = {
+		192A7A29292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "SportData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192A7A2A292B3C310076B1A7 /* Debug */,
@@ -1193,7 +1193,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		192A7A2C292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "SportTests" */ = {
+		192A7A2C292B3C310076B1A7 /* Build configuration list for PBXNativeTarget "SportDataTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192A7A2D292B3C310076B1A7 /* Debug */,
@@ -1220,7 +1220,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPI" */ = {
+		192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192A7A94292B4BC80076B1A7 /* Debug */,
@@ -1229,7 +1229,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPITests" */ = {
+		192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192A7A98292B4BC80076B1A7 /* Debug */,

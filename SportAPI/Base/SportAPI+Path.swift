@@ -1,5 +1,4 @@
 import Foundation
-import Sport
 
 extension SportAPI {
     enum Path: Hashable {
