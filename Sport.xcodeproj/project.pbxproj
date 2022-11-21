@@ -20,6 +20,10 @@
 		192A7A4A292B43130076B1A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192A7A49292B43130076B1A7 /* Assets.xcassets */; };
 		192A7A4D292B43130076B1A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192A7A4B292B43130076B1A7 /* LaunchScreen.storyboard */; };
 		192A7A59292B43270076B1A7 /* MainAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A58292B43270076B1A7 /* MainAppTests.swift */; };
+		192A7A68292B45F60076B1A7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A67292B45F60076B1A7 /* MainTabBarController.swift */; };
+		192A7A6F292B478A0076B1A7 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A6E292B478A0076B1A7 /* MatchesViewController.swift */; };
+		192A7A73292B47A80076B1A7 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A72292B47A80076B1A7 /* TeamsViewController.swift */; };
+		192A7A76292B4ACA0076B1A7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 192A7A75292B4ACA0076B1A7 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,9 @@
 		192A7A4E292B43130076B1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		192A7A56292B43270076B1A7 /* MainAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192A7A58292B43270076B1A7 /* MainAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppTests.swift; sourceTree = "<group>"; };
+		192A7A67292B45F60076B1A7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		192A7A6E292B478A0076B1A7 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		192A7A72292B47A80076B1A7 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192A7A76292B4ACA0076B1A7 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +149,8 @@
 			children = (
 				192A7A61292B44080076B1A7 /* App */,
 				192A7A5F292B436D0076B1A7 /* MainTabBar */,
+				192A7A6D292B47690076B1A7 /* Matches */,
+				192A7A6A292B47430076B1A7 /* Teams */,
 			);
 			path = MainApp;
 			sourceTree = "<group>";
@@ -156,6 +166,7 @@
 		192A7A5F292B436D0076B1A7 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				192A7A66292B45D60076B1A7 /* Controllers */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -205,6 +216,46 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		192A7A66292B45D60076B1A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				192A7A67292B45F60076B1A7 /* MainTabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		192A7A6A292B47430076B1A7 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				192A7A71292B479B0076B1A7 /* Controllers */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		192A7A6D292B47690076B1A7 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				192A7A70292B47920076B1A7 /* Controllers */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		192A7A70292B47920076B1A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				192A7A6E292B478A0076B1A7 /* MatchesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		192A7A71292B479B0076B1A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				192A7A72292B47A80076B1A7 /* TeamsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -233,6 +284,9 @@
 			dependencies = (
 			);
 			name = Sport;
+			packageProductDependencies = (
+				192A7A75292B4ACA0076B1A7 /* SDWebImage */,
+			);
 			productName = Sport;
 			productReference = 192A7A15292B3C310076B1A7 /* Sport.framework */;
 			productType = "com.apple.product-type.framework";
@@ -325,6 +379,9 @@
 				Base,
 			);
 			mainGroup = 192A7A0B292B3C310076B1A7;
+			packageReferences = (
+				192A7A74292B4ACA0076B1A7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 192A7A16292B3C310076B1A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -397,6 +454,9 @@
 			files = (
 				192A7A41292B43110076B1A7 /* AppDelegate.swift in Sources */,
 				192A7A43292B43110076B1A7 /* SceneDelegate.swift in Sources */,
+				192A7A6F292B478A0076B1A7 /* MatchesViewController.swift in Sources */,
+				192A7A73292B47A80076B1A7 /* TeamsViewController.swift in Sources */,
+				192A7A68292B45F60076B1A7 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,7 +744,6 @@
 				INFOPLIST_FILE = MainApp/App/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -713,7 +772,6 @@
 				INFOPLIST_FILE = MainApp/App/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -817,6 +875,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		192A7A74292B4ACA0076B1A7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		192A7A75292B4ACA0076B1A7 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 192A7A74292B4ACA0076B1A7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 192A7A0C292B3C310076B1A7 /* Project object */;
 }
