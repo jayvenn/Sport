@@ -1,12 +1,12 @@
 import Combine
 import Foundation
 
-final class SportAPI {
+public final class SportAPI {
     // MARK: - Value Types
     typealias Parameters = [Parameter: AnyHashable]
     typealias Headers = [String: AnyHashable]
     // MARK: - Properties
-    static let shared = SportAPI()
+    public static let shared = SportAPI()
     // MARK: - Initializers
     private init() { }
     // MARK: - Unauthenticated Publishers

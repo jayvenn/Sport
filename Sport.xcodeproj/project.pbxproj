@@ -36,6 +36,8 @@
 		192A7AA9292B4C270076B1A7 /* SportAPI+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AA2292B4C260076B1A7 /* SportAPI+Path.swift */; };
 		192A7AAA292B4C270076B1A7 /* SportAPI+Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AA3292B4C260076B1A7 /* SportAPI+Parameter.swift */; };
 		192A7AAB292B4C270076B1A7 /* SportAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AA4292B4C260076B1A7 /* SportAPI.swift */; };
+		192A7AAE292B4F330076B1A7 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AAD292B4F330076B1A7 /* MatchesViewModel.swift */; };
+		192A7AB1292B4F980076B1A7 /* MatchesFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AB0292B4F980076B1A7 /* MatchesFetchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		192A7AA2292B4C260076B1A7 /* SportAPI+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SportAPI+Path.swift"; sourceTree = "<group>"; };
 		192A7AA3292B4C260076B1A7 /* SportAPI+Parameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SportAPI+Parameter.swift"; sourceTree = "<group>"; };
 		192A7AA4292B4C260076B1A7 /* SportAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportAPI.swift; sourceTree = "<group>"; };
+		192A7AAD292B4F330076B1A7 /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
+		192A7AB0292B4F980076B1A7 /* MatchesFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesFetchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,10 +256,10 @@
 		192A7A61292B44080076B1A7 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				192A7A65292B44DE0076B1A7 /* SupportingFiles */,
 				192A7A64292B44390076B1A7 /* Delegates */,
 				192A7A63292B44210076B1A7 /* InterfaceBuilder */,
 				192A7A62292B44140076B1A7 /* Resources */,
+				192A7A65292B44DE0076B1A7 /* SupportingFiles */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -312,6 +316,8 @@
 		192A7A6D292B47690076B1A7 /* Matches */ = {
 			isa = PBXGroup;
 			children = (
+				192A7AAF292B4F6C0076B1A7 /* Protocols */,
+				192A7AAC292B4F260076B1A7 /* ViewModels */,
 				192A7A70292B47920076B1A7 /* Controllers */,
 			);
 			path = Matches;
@@ -379,6 +385,22 @@
 				192A7AA4292B4C260076B1A7 /* SportAPI.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		192A7AAC292B4F260076B1A7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				192A7AAD292B4F330076B1A7 /* MatchesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		192A7AAF292B4F6C0076B1A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				192A7AB0292B4F980076B1A7 /* MatchesFetchable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,6 +668,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192A7AAE292B4F330076B1A7 /* MatchesViewModel.swift in Sources */,
+				192A7AB1292B4F980076B1A7 /* MatchesFetchable.swift in Sources */,
 				192A7A41292B43110076B1A7 /* AppDelegate.swift in Sources */,
 				192A7A43292B43110076B1A7 /* SceneDelegate.swift in Sources */,
 				192A7A6F292B478A0076B1A7 /* MatchesViewController.swift in Sources */,
@@ -971,7 +995,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1000,7 +1024,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1022,7 +1046,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6897VAM74N;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayvennhan.app.MainAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1041,7 +1065,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6897VAM74N;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayvennhan.app.MainAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1065,7 +1089,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1094,7 +1118,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1118,7 +1142,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6897VAM74N;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayvennhan.app.SportAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1137,7 +1161,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6897VAM74N;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayvennhan.app.SportAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

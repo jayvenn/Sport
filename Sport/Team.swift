@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Team: Decodable {
-    let id: UUID
-    let name: String
-    let logo: URL
+public struct Team: Decodable {
+    public let id: UUID
+    public let name: String
+    public let logo: URL
 }

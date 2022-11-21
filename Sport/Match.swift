@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Match: Decodable {
-    let date: Date
-    let description: String
-    let home: String
-    let away: String
-    let winner: String
-    let highlights: URL
+public struct Match: Decodable {
+    public let date: Date
+    public let description: String
+    public let home: String
+    public let away: String
+    public let winner: String
+    public let highlights: URL
 }
