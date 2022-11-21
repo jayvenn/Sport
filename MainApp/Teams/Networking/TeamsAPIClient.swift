@@ -10,7 +10,7 @@ import Football
 import SportAPI
 
 final class TeamsAPIClient: TeamsFetchable {
-    func getTeams() -> AnyPublisher<[Team], Error> {
+    func getTeams() -> AnyPublisher<TeamsAPIResponse, Error> {
         SportAPI.shared.makeUnauthenticatedPublisher(path: .teams)
     }
 }

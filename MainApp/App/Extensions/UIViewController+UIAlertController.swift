@@ -18,7 +18,8 @@ extension UIViewController {
         }
     }
     func presentAlert(
-        withTitle title: String, message: String?, okAlert: String) {
+        withTitle title: String, message: String?, okAlert: String
+    ) {
             let alertController = UIAlertController(
                 title: title,
                 message: message,
