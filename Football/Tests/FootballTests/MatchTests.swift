@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Sport
+import Football
 
 final class MatchTests: XCTestCase {
     // MARK: - Properties
@@ -45,17 +45,19 @@ final class MatchTests: XCTestCase {
         XCTAssertNotEqual(away, UUID().uuidString)
         XCTAssert(!away.isEmpty)
     }
-    func test_winner_init_propertyEqualsInput() {
+    func test_winner_init_propertyEqualsInput() throws {
         let winner = sut.winner
         XCTAssertEqual(winner, mock.winner)
         XCTAssertNotEqual(winner, UUID().uuidString)
-        XCTAssert(!winner.isEmpty)
+        let unwrappedWinner = try XCTUnwrap(sut.winner)
+        XCTAssert(!unwrappedWinner.isEmpty)
     }
-    func test_highlights_init_propertyEqualsInput() {
+    func test_highlights_init_propertyEqualsInput() throws {
         let highlights = sut.highlights
         XCTAssertEqual(highlights, mock.highlights)
         XCTAssertNotEqual(highlights, URL(string: "https://www.abc.com/")!)
-        XCTAssert(!highlights.absoluteString.isEmpty)
+        let unwrappedHighlights = try XCTUnwrap(sut.highlights)
+        XCTAssert(!unwrappedHighlights.absoluteString.isEmpty)
     }
     // MARK: - Helpers
     struct Mock {

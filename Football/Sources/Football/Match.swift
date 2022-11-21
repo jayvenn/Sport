@@ -14,4 +14,12 @@ public struct Match: Decodable {
     public let away: String
     public let winner: String?
     public let highlights: URL?
+    public init(date: Date, description: String, home: String, away: String, winner: String?, highlights: URL?) {
+        self.date = date
+        self.description = description
+        self.home = home
+        self.away = away
+        self.winner = winner
+        self.highlights = highlights
+    }
 }

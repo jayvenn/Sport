@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Sport
+import Football
 
 final class TeamTests: XCTestCase {
     // MARK: - Propertes
