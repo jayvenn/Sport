@@ -3,14 +3,14 @@ import Foundation
 
 public final class SportAPI {
     // MARK: - Value Types
-    typealias Parameters = [Parameter: AnyHashable]
-    typealias Headers = [String: AnyHashable]
+    public typealias Parameters = [Parameter: AnyHashable]
+    public typealias Headers = [String: AnyHashable]
     // MARK: - Properties
     public static let shared = SportAPI()
     // MARK: - Initializers
     private init() { }
     // MARK: - Unauthenticated Publishers
-    func makeUnauthenticatedPublisher<T: Decodable>(
+    public func makeUnauthenticatedPublisher<T: Decodable>(
         path: Path,
         headers: Headers? = nil,
         parameters: Parameters = [:]
@@ -18,7 +18,7 @@ public final class SportAPI {
         makePublisher(path: path, headers: headers, parameters: parameters)
     }
     // MARK: - URL Publisher Factory
-    private func makePublisher<T: Decodable>(
+    func makePublisher<T: Decodable>(
         accessToken: String? = nil,
         membershipId: String? = nil,
         path: Path,

@@ -22,13 +22,12 @@
 		192A7A68292B45F60076B1A7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A67292B45F60076B1A7 /* MainTabBarController.swift */; };
 		192A7A6F292B478A0076B1A7 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A6E292B478A0076B1A7 /* MatchesViewController.swift */; };
 		192A7A73292B47A80076B1A7 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A72292B47A80076B1A7 /* TeamsViewController.swift */; };
-		192A7A76292B4ACA0076B1A7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 192A7A75292B4ACA0076B1A7 /* SDWebImage */; };
 		192A7A80292B4BC80076B1A7 /* SportAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A7F292B4BC80076B1A7 /* SportAPI.docc */; };
-		192A7A86292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */; };
+		192A7A86292B4BC80076B1A7 /* SportAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */; };
 		192A7A8D292B4BC80076B1A7 /* SportAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A8C292B4BC80076B1A7 /* SportAPITests.swift */; };
 		192A7A8E292B4BC80076B1A7 /* SportAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 192A7A7E292B4BC80076B1A7 /* SportAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		192A7A91292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */; };
-		192A7A92292B4BC80076B1A7 /* SportDataAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		192A7A91292B4BC80076B1A7 /* SportAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */; };
+		192A7A92292B4BC80076B1A7 /* SportAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		192A7AA5292B4C260076B1A7 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A9C292B4C260076B1A7 /* ResponseError.swift */; };
 		192A7AA6292B4C260076B1A7 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A9D292B4C260076B1A7 /* AuthenticationError.swift */; };
 		192A7AA7292B4C260076B1A7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7A9E292B4C260076B1A7 /* NetworkError.swift */; };
@@ -38,6 +37,12 @@
 		192A7AAB292B4C270076B1A7 /* SportAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AA4292B4C260076B1A7 /* SportAPI.swift */; };
 		192A7AAE292B4F330076B1A7 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AAD292B4F330076B1A7 /* MatchesViewModel.swift */; };
 		192A7AB1292B4F980076B1A7 /* MatchesFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AB0292B4F980076B1A7 /* MatchesFetchable.swift */; };
+		192A7AB7292B58250076B1A7 /* MatchesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AB6292B58250076B1A7 /* MatchesAPIClient.swift */; };
+		192A7ABA292B58730076B1A7 /* TeamsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AB9292B58730076B1A7 /* TeamsAPIClient.swift */; };
+		192A7ABD292B588C0076B1A7 /* TeamsFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7ABC292B588C0076B1A7 /* TeamsFetchable.swift */; };
+		192A7AC0292B592D0076B1A7 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7ABF292B592D0076B1A7 /* TeamsViewModel.swift */; };
+		192A7AC3292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AC2292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift */; };
+		192A7AC9292B5D230076B1A7 /* MatchesAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AC8292B5D230076B1A7 /* MatchesAPIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				192A7A92292B4BC80076B1A7 /* SportDataAPI.framework in Embed Frameworks */,
+				192A7A92292B4BC80076B1A7 /* SportAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,10 +118,10 @@
 		192A7A67292B45F60076B1A7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		192A7A6E292B478A0076B1A7 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		192A7A72292B47A80076B1A7 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
-		192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SportDataAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		192A7A7C292B4BC80076B1A7 /* SportAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SportAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192A7A7E292B4BC80076B1A7 /* SportAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SportAPI.h; sourceTree = "<group>"; };
 		192A7A7F292B4BC80076B1A7 /* SportAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SportAPI.docc; sourceTree = "<group>"; };
-		192A7A85292B4BC80076B1A7 /* SportDataAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportDataAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		192A7A85292B4BC80076B1A7 /* SportAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192A7A8C292B4BC80076B1A7 /* SportAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportAPITests.swift; sourceTree = "<group>"; };
 		192A7A9C292B4C260076B1A7 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		192A7A9D292B4C260076B1A7 /* AuthenticationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
@@ -127,6 +132,12 @@
 		192A7AA4292B4C260076B1A7 /* SportAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportAPI.swift; sourceTree = "<group>"; };
 		192A7AAD292B4F330076B1A7 /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
 		192A7AB0292B4F980076B1A7 /* MatchesFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesFetchable.swift; sourceTree = "<group>"; };
+		192A7AB6292B58250076B1A7 /* MatchesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesAPIClient.swift; sourceTree = "<group>"; };
+		192A7AB9292B58730076B1A7 /* TeamsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsAPIClient.swift; sourceTree = "<group>"; };
+		192A7ABC292B588C0076B1A7 /* TeamsFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsFetchable.swift; sourceTree = "<group>"; };
+		192A7ABF292B592D0076B1A7 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		192A7AC2292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
+		192A7AC8292B5D230076B1A7 /* MatchesAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesAPIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192A7A76292B4ACA0076B1A7 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192A7A91292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */,
+				192A7A91292B4BC80076B1A7 /* SportAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192A7A86292B4BC80076B1A7 /* SportDataAPI.framework in Frameworks */,
+				192A7A86292B4BC80076B1A7 /* SportAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				192A7A17292B3C310076B1A7 /* SportData */,
-				192A7A23292B3C310076B1A7 /* SportDataTests */,
+				192A7A23292B3C310076B1A7 /* SportTests */,
 				192A7A7D292B4BC80076B1A7 /* SportAPI */,
 				192A7A8B292B4BC80076B1A7 /* SportAPITests */,
 				192A7A3F292B43110076B1A7 /* MainApp */,
@@ -199,8 +209,8 @@
 				192A7A1F292B3C310076B1A7 /* SportDataTests.xctest */,
 				192A7A3E292B43110076B1A7 /* MainApp.app */,
 				192A7A56292B43270076B1A7 /* MainAppTests.xctest */,
-				192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */,
-				192A7A85292B4BC80076B1A7 /* SportDataAPITests.xctest */,
+				192A7A7C292B4BC80076B1A7 /* SportAPI.framework */,
+				192A7A85292B4BC80076B1A7 /* SportAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,18 +222,19 @@
 				192A7A2F292B3C3A0076B1A7 /* Team.swift */,
 				192A7A18292B3C310076B1A7 /* Sport.h */,
 				192A7A19292B3C310076B1A7 /* Sport.docc */,
+				192A7AC8292B5D230076B1A7 /* MatchesAPIResponse.swift */,
 			);
 			path = SportData;
 			sourceTree = "<group>";
 		};
-		192A7A23292B3C310076B1A7 /* SportDataTests */ = {
+		192A7A23292B3C310076B1A7 /* SportTests */ = {
 			isa = PBXGroup;
 			children = (
 				192A7A34292B3C630076B1A7 /* MatchTests.swift */,
 				192A7A38292B3D130076B1A7 /* TeamTests.swift */,
 				192A7A33292B3C630076B1A7 /* SportTests-Bridging-Header.h */,
 			);
-			path = SportDataTests;
+			path = SportTests;
 			sourceTree = "<group>";
 		};
 		192A7A3F292B43110076B1A7 /* MainApp */ = {
@@ -256,6 +267,7 @@
 		192A7A61292B44080076B1A7 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				192A7AC1292B5A970076B1A7 /* Extensions */,
 				192A7A64292B44390076B1A7 /* Delegates */,
 				192A7A63292B44210076B1A7 /* InterfaceBuilder */,
 				192A7A62292B44140076B1A7 /* Resources */,
@@ -309,6 +321,9 @@
 			isa = PBXGroup;
 			children = (
 				192A7A71292B479B0076B1A7 /* Controllers */,
+				192A7AB8292B586A0076B1A7 /* Networking */,
+				192A7ABB292B58840076B1A7 /* Protocols */,
+				192A7ABE292B59220076B1A7 /* ViewModels */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -316,9 +331,10 @@
 		192A7A6D292B47690076B1A7 /* Matches */ = {
 			isa = PBXGroup;
 			children = (
+				192A7A70292B47920076B1A7 /* Controllers */,
+				192A7AB5292B57F90076B1A7 /* Networking */,
 				192A7AAF292B4F6C0076B1A7 /* Protocols */,
 				192A7AAC292B4F260076B1A7 /* ViewModels */,
-				192A7A70292B47920076B1A7 /* Controllers */,
 			);
 			path = Matches;
 			sourceTree = "<group>";
@@ -403,6 +419,46 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		192A7AB5292B57F90076B1A7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				192A7AB6292B58250076B1A7 /* MatchesAPIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		192A7AB8292B586A0076B1A7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				192A7AB9292B58730076B1A7 /* TeamsAPIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		192A7ABB292B58840076B1A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				192A7ABC292B588C0076B1A7 /* TeamsFetchable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		192A7ABE292B59220076B1A7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				192A7ABF292B592D0076B1A7 /* TeamsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		192A7AC1292B5A970076B1A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				192A7AC2292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -440,7 +496,6 @@
 			);
 			name = SportData;
 			packageProductDependencies = (
-				192A7A75292B4ACA0076B1A7 /* SDWebImage */,
 			);
 			productName = Sport;
 			productReference = 192A7A15292B3C310076B1A7 /* SportData.framework */;
@@ -501,9 +556,9 @@
 			productReference = 192A7A56292B43270076B1A7 /* MainAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		192A7A7B292B4BC80076B1A7 /* SportDataAPI */ = {
+		192A7A7B292B4BC80076B1A7 /* SportAPI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPI" */;
+			buildConfigurationList = 192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPI" */;
 			buildPhases = (
 				192A7A77292B4BC80076B1A7 /* Headers */,
 				192A7A78292B4BC80076B1A7 /* Sources */,
@@ -514,14 +569,14 @@
 			);
 			dependencies = (
 			);
-			name = SportDataAPI;
+			name = SportAPI;
 			productName = SportAPI;
-			productReference = 192A7A7C292B4BC80076B1A7 /* SportDataAPI.framework */;
+			productReference = 192A7A7C292B4BC80076B1A7 /* SportAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		192A7A84292B4BC80076B1A7 /* SportDataAPITests */ = {
+		192A7A84292B4BC80076B1A7 /* SportAPITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPITests" */;
+			buildConfigurationList = 192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPITests" */;
 			buildPhases = (
 				192A7A81292B4BC80076B1A7 /* Sources */,
 				192A7A82292B4BC80076B1A7 /* Frameworks */,
@@ -533,9 +588,9 @@
 				192A7A88292B4BC80076B1A7 /* PBXTargetDependency */,
 				192A7A8A292B4BC80076B1A7 /* PBXTargetDependency */,
 			);
-			name = SportDataAPITests;
+			name = SportAPITests;
 			productName = SportAPITests;
-			productReference = 192A7A85292B4BC80076B1A7 /* SportDataAPITests.xctest */;
+			productReference = 192A7A85292B4BC80076B1A7 /* SportAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -581,7 +636,6 @@
 			);
 			mainGroup = 192A7A0B292B3C310076B1A7;
 			packageReferences = (
-				192A7A74292B4ACA0076B1A7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 192A7A16292B3C310076B1A7 /* Products */;
 			projectDirPath = "";
@@ -591,8 +645,8 @@
 				192A7A1E292B3C310076B1A7 /* SportDataTests */,
 				192A7A3D292B43110076B1A7 /* MainApp */,
 				192A7A55292B43270076B1A7 /* MainAppTests */,
-				192A7A7B292B4BC80076B1A7 /* SportDataAPI */,
-				192A7A84292B4BC80076B1A7 /* SportDataAPITests */,
+				192A7A7B292B4BC80076B1A7 /* SportAPI */,
+				192A7A84292B4BC80076B1A7 /* SportAPITests */,
 			);
 		};
 /* End PBXProject section */
@@ -650,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				192A7A31292B3C3A0076B1A7 /* Team.swift in Sources */,
+				192A7AC9292B5D230076B1A7 /* MatchesAPIResponse.swift in Sources */,
 				192A7A1A292B3C310076B1A7 /* Sport.docc in Sources */,
 				192A7A32292B3C3A0076B1A7 /* Match.swift in Sources */,
 			);
@@ -668,6 +723,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192A7ABA292B58730076B1A7 /* TeamsAPIClient.swift in Sources */,
+				192A7AC0292B592D0076B1A7 /* TeamsViewModel.swift in Sources */,
 				192A7AAE292B4F330076B1A7 /* MatchesViewModel.swift in Sources */,
 				192A7AB1292B4F980076B1A7 /* MatchesFetchable.swift in Sources */,
 				192A7A41292B43110076B1A7 /* AppDelegate.swift in Sources */,
@@ -675,6 +732,9 @@
 				192A7A6F292B478A0076B1A7 /* MatchesViewController.swift in Sources */,
 				192A7A73292B47A80076B1A7 /* TeamsViewController.swift in Sources */,
 				192A7A68292B45F60076B1A7 /* MainTabBarController.swift in Sources */,
+				192A7AC3292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift in Sources */,
+				192A7AB7292B58250076B1A7 /* MatchesAPIClient.swift in Sources */,
+				192A7ABD292B588C0076B1A7 /* TeamsFetchable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +784,7 @@
 		};
 		192A7A88292B4BC80076B1A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 192A7A7B292B4BC80076B1A7 /* SportDataAPI */;
+			target = 192A7A7B292B4BC80076B1A7 /* SportAPI */;
 			targetProxy = 192A7A87292B4BC80076B1A7 /* PBXContainerItemProxy */;
 		};
 		192A7A8A292B4BC80076B1A7 /* PBXTargetDependency */ = {
@@ -734,7 +794,7 @@
 		};
 		192A7A90292B4BC80076B1A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 192A7A7B292B4BC80076B1A7 /* SportDataAPI */;
+			target = 192A7A7B292B4BC80076B1A7 /* SportAPI */;
 			targetProxy = 192A7A8F292B4BC80076B1A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1220,7 +1280,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPI" */ = {
+		192A7A93292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192A7A94292B4BC80076B1A7 /* Debug */,
@@ -1229,7 +1289,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportDataAPITests" */ = {
+		192A7A97292B4BC80076B1A7 /* Build configuration list for PBXNativeTarget "SportAPITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192A7A98292B4BC80076B1A7 /* Debug */,
@@ -1239,25 +1299,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		192A7A74292B4ACA0076B1A7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		192A7A75292B4ACA0076B1A7 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 192A7A74292B4ACA0076B1A7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 192A7A0C292B3C310076B1A7 /* Project object */;
 }

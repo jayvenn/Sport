@@ -1,6 +1,6 @@
 import Foundation
 
-extension SportAPI {
+public extension SportAPI {
     enum Path: Hashable {
         case teams
         case matches
@@ -9,7 +9,7 @@ extension SportAPI {
             case .teams:
                 return "teams"
             case .matches:
-                return "matches"
+                return "teams/matches"
             }
         }
         var httpMethod: HTTPMethod {

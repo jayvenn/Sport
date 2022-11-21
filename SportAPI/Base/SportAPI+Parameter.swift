@@ -1,6 +1,6 @@
 import Foundation
 
-extension SportAPI {
+public extension SportAPI {
     enum Parameter: String {
         case username
         case password

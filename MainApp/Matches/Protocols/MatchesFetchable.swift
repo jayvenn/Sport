@@ -8,5 +8,5 @@
 import Combine
 
 protocol MatchesFetchable {
-//    func getMatches() -> AnyPublisher<[Match], Error>
+    func getMatches() -> AnyPublisher<[Match], Error>
 }
