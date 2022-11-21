@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import Football
+import FootballCore
 
 final class MatchTests: XCTestCase {
     // MARK: - Properties

@@ -35,7 +35,7 @@
 		192A7ABD292B588C0076B1A7 /* TeamsFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7ABC292B588C0076B1A7 /* TeamsFetchable.swift */; };
 		192A7AC0292B592D0076B1A7 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7ABF292B592D0076B1A7 /* TeamsViewModel.swift */; };
 		192A7AC3292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A7AC2292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift */; };
-		19384200292B65E600A86032 /* Football in Frameworks */ = {isa = PBXBuildFile; productRef = 193841FF292B65E600A86032 /* Football */; };
+		199E7B74292BBA7000D2C07D /* FootballCore in Frameworks */ = {isa = PBXBuildFile; productRef = 199E7B73292BBA7000D2C07D /* FootballCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +114,7 @@
 		192A7ABC292B588C0076B1A7 /* TeamsFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsFetchable.swift; sourceTree = "<group>"; };
 		192A7ABF292B592D0076B1A7 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		192A7AC2292B5AAC0076B1A7 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
-		193841FB292B610C00A86032 /* Football */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Football; sourceTree = "<group>"; };
+		196582FA292BB98800B38041 /* FootballCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FootballCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199E7B74292BBA7000D2C07D /* FootballCore in Frameworks */,
 				192A7A91292B4BC80076B1A7 /* SportAPI.framework in Frameworks */,
-				19384200292B65E600A86032 /* Football in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +155,7 @@
 		192A7A0B292B3C310076B1A7 = {
 			isa = PBXGroup;
 			children = (
-				193841FB292B610C00A86032 /* Football */,
+				196582FA292BB98800B38041 /* FootballCore */,
 				192A7A7D292B4BC80076B1A7 /* SportAPI */,
 				192A7A8B292B4BC80076B1A7 /* SportAPITests */,
 				192A7A3F292B43110076B1A7 /* MainApp */,
@@ -435,7 +435,7 @@
 			);
 			name = MainApp;
 			packageProductDependencies = (
-				193841FF292B65E600A86032 /* Football */,
+				199E7B73292BBA7000D2C07D /* FootballCore */,
 			);
 			productName = MainApp;
 			productReference = 192A7A3E292B43110076B1A7 /* MainApp.app */;
@@ -1029,9 +1029,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		193841FF292B65E600A86032 /* Football */ = {
+		199E7B73292BBA7000D2C07D /* FootballCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Football;
+			productName = FootballCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
