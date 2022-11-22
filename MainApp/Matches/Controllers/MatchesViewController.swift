@@ -11,7 +11,7 @@ import FootballUI
 
 final class MatchesViewController: UICollectionViewController {
     // MARK: - UI Properties
-    let segmentedControl = UISegmentedControl(items: ["Upcoming", "Previous"])
+    private let segmentedControl = UISegmentedControl(items: ["Upcoming", "Previous"])
     // MARK: - Business Properties
     private let viewModel: MatchesViewModel
     private lazy var matchesUIHandler = MatchesUIHandler(collectionView: collectionView)
@@ -35,6 +35,7 @@ final class MatchesViewController: UICollectionViewController {
     // MARK: - Overheads
     private func setupNavigationBar() {
         segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: #selector(segmentedValueChanged), for: .valueChanged)
         let segmentBarItem = UIBarButtonItem(customView: segmentedControl)
         navigationItem.leftBarButtonItem = segmentBarItem
     }
@@ -54,5 +55,10 @@ final class MatchesViewController: UICollectionViewController {
             )
         }
         .store(in: &anyCancellables)
+    }
+    // MARK: - Actions
+    @objc func segmentedValueChanged(_ sender: UISegmentedControl) {
+        viewModel.isUpcoming = sender.selectedSegmentIndex == 0
+        print("Selected Segment Index is : \(sender.selectedSegmentIndex)")
     }
 }
