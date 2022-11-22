@@ -26,7 +26,3 @@ final class TeamsViewController: UIViewController {
         viewModel.fetchMatches()
     }
 }
-// MARK: - TeamsUIHandler
-extension TeamsViewController: TeamsUIHandler {
-    
-}

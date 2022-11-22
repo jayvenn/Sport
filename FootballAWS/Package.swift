@@ -16,6 +16,7 @@ let package = Package(
             targets: ["FootballAWS"]),
     ],
     dependencies: [
+        .package(name: "FootballCore", path: "./FootballCore")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],

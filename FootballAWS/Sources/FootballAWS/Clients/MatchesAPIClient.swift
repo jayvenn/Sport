@@ -6,11 +6,12 @@
 //
 
 import Combine
-import FootballAWS
 import FootballCore
 
-final class MatchesAPIClient: MatchesFetchable {
-    func getMatches() -> AnyPublisher<MatchesAPIResponse, Error> {
+public final class MatchesAPIClient: MatchesFetchable {
+    public init() {
+    }
+    public func getMatches() -> AnyPublisher<MatchesAPIResponse, Error> {
         FootballAWS.shared.makeUnauthenticatedPublisher(path: .matches)
     }
 }
