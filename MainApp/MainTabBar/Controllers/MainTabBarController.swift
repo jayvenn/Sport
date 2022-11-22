@@ -19,12 +19,12 @@ final class MainTabBarController: UITabBarController {
             makeNavigationController(
                 MatchesViewController(),
                 title: "Matches",
-                image: UIImage(systemName: "flag.2.crossed.circle.fill")!
+                image: UIImage(systemName: "flag.2.crossed.circle.fill")
             ),
             makeNavigationController(
                 TeamsViewController(),
                 title: "Teams",
-                image: UIImage(systemName: "figure.soccer")!
+                image: UIImage(systemName: "figure.soccer")
             )
         ]
     }
@@ -32,7 +32,7 @@ final class MainTabBarController: UITabBarController {
     private func makeNavigationController(
         _ viewController: UIViewController,
         title: String,
-        image: UIImage
+        image: UIImage?
     ) -> UINavigationController {
         let navigationController = UINavigationController(
             rootViewController: viewController
