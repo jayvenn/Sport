@@ -8,12 +8,12 @@
 import Foundation
 
 public struct MatchesAPIResponse: Decodable {
-    struct Matches: Decodable {
+    public struct Matches: Decodable {
         public let previous: [Match]
         public let upcoming: [Match]
     }
     public struct MatchGroup: Decodable {
         public let matches: [Match]
     }
-    let matches: Matches
+    public let matches: Matches
 }

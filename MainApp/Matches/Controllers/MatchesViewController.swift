@@ -10,7 +10,9 @@ import Combine
 import FootballUI
 
 final class MatchesViewController: UICollectionViewController {
-    // MARK: - Properties
+    // MARK: - UI Properties
+    let segmentedControl = UISegmentedControl(items: ["Upcoming", "Previous"])
+    // MARK: - Business Properties
     private let viewModel: MatchesViewModel
     private lazy var matchesUIHandler = MatchesUIHandler(collectionView: collectionView)
     private var anyCancellables = Set<AnyCancellable>()
@@ -25,10 +27,17 @@ final class MatchesViewController: UICollectionViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
+        matchesUIHandler.sinkDefaultObjects(viewController: self)
         sinkMatchesSubject()
         viewModel.fetchMatches()
     }
     // MARK: - Overheads
+    private func setupNavigationBar() {
+        segmentedControl.selectedSegmentIndex = 0
+        let segmentBarItem = UIBarButtonItem(customView: segmentedControl)
+        navigationItem.leftBarButtonItem = segmentBarItem
+    }
     private func sinkMatchesSubject() {
         viewModel.matchesSubject.sink { [weak self] completion in
             switch completion {
@@ -39,10 +48,10 @@ final class MatchesViewController: UICollectionViewController {
                     message: error.localizedDescription
                 )
             }
-        } receiveValue: { matches in
-            print("Matches:")
-            print(matches)
-            // Load data
+        } receiveValue: { [weak self] matches in
+            self?.matchesUIHandler.applyDataSourceSnapshot(
+                hashableObjects: matches
+            )
         }
         .store(in: &anyCancellables)
     }

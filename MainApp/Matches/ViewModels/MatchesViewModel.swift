@@ -13,7 +13,8 @@ final class MatchesViewModel {
     // MARK: - Properties
     private var anyCancellables = Set<AnyCancellable>()
     private let apiClient: MatchesFetchable
-    let matchesSubject = PassthroughSubject<MatchesAPIResponse, Error>()
+    let matchesSubject = PassthroughSubject<[Match], Error>()
+    var isUpcoming = true
     // MARK: - Init
     init(apiClient: MatchesFetchable = MatchesAPIClient()) {
         self.apiClient = apiClient
@@ -27,8 +28,12 @@ final class MatchesViewModel {
             case .failure(let error):
                 self?.matchesSubject.send(completion: .failure(error))
             }
-        } receiveValue: { [weak self] response in
-            self?.matchesSubject.send(response)
+        } receiveValue: { [weak self] matchesAPIResponse in
+            guard let self = self else { return }
+            let matches = self.isUpcoming
+            ? matchesAPIResponse.matches.upcoming
+            : matchesAPIResponse.matches.previous
+            self.matchesSubject.send(matches)
         }
         .store(in: &anyCancellables)
     }

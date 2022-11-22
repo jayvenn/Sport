@@ -49,7 +49,7 @@ public class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
     // MARK: - Subscription
-    func sinkDefaultObjects(viewController: UIViewController) {
+    public func sinkDefaultObjects(viewController: UIViewController) {
         sinkErrorMessage(viewController: viewController)
         sinkHashableObjects(viewController: viewController)
     }

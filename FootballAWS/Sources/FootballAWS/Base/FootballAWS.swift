@@ -42,6 +42,7 @@ public final class FootballAWS {
         return URLSession.shared
             .dataTaskPublisher(for: request as URLRequest)
             .share()
+            .receive(on: DispatchQueue.global())
             .tryMap { result -> T in
                 NetworkLogger.log(response: result.response, data: result.data)
                 guard let httpURLResponse = result.response as? HTTPURLResponse else {
