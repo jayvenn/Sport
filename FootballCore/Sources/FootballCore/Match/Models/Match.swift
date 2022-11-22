@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Match: Decodable, Hashable {
+public struct Match: Hashable, Decodable {
     public let date: Date
     public let description: String
     public let home: String
@@ -21,5 +21,16 @@ public struct Match: Decodable, Hashable {
         self.away = away
         self.winner = winner
         self.highlights = highlights
+    }
+    public func hash(into hasher: inout Hasher) {
+        [
+            date.description,
+            description,
+            home,
+            away,
+            winner?.description ?? "",
+            highlights?.description ?? ""
+        ]
+            .forEach { hasher.combine($0) }
     }
 }

@@ -8,33 +8,14 @@
 import UIKit
 import Combine
 
-protocol CollectionUILoadable: AnyObject {
-    associatedtype ListObject: Hashable
-    typealias Snapshot = NSDiffableDataSourceSnapshot<String, ListObject>
-    typealias DataSource = UICollectionViewDiffableDataSource<String, ListObject>
-    typealias CellConfiguration = (UICollectionViewListCell, ListObject) -> Void
-    typealias DequeueCellOperation = (UICollectionView, IndexPath, ListObject) -> UICollectionViewListCell?
-    var collectionView: UICollectionView { get }
-}
-
-final class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
+public class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
     // MARK: - Properties
-    let collectionView: UICollectionView
-    var cellConfiguration: CellConfiguration?
-    var dequeueHeaderCellOperation: DequeueCellOperation?
+    public let collectionView: UICollectionView
+    public var cellConfiguration: CellConfiguration?
+    public var dequeueHeaderCellOperation: DequeueCellOperation?
     private(set) var hashableObjects = CurrentValueSubject<[ListObject], Never>([])
-    private lazy var customLayout: UICollectionViewLayout = {
-        let layout = UICollectionViewCompositionalLayout { _, layoutEnvironment -> NSCollectionLayoutSection? in
-            var listConfiguration = UICollectionLayoutListConfiguration(
-                appearance: .insetGrouped
-            )
-            let listCollectionLayoutSection = NSCollectionLayoutSection.list(
-                using: listConfiguration, layoutEnvironment: layoutEnvironment
-            )
-            return listCollectionLayoutSection
-        }
-        return layout
-    }()
+    private(set) var errorMessage = PassthroughSubject<String, Never>()
+    private var anyCancellables = Set<AnyCancellable>()
     lazy var dataSource: DataSource = {
         let listCellRegistration = UICollectionView.CellRegistration
         <UICollectionViewListCell, ListObject> { [weak self] cell, _, object in
@@ -54,17 +35,38 @@ final class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
         return dataSource
     }()
     // MARK: - Initializers
-    init(collectionView: UICollectionView) {
+    public init(collectionView: UICollectionView) {
         self.collectionView = collectionView
     }
     // MARK: - Data Source
-    func applyDataSourceSnapshot(animatingDifferences: Bool = true) {
+    public func applyDataSourceSnapshot(animatingDifferences: Bool = true) {
         applyDataSourceSnapshot(hashableObjects: hashableObjects.value, animatingDifferences: animatingDifferences)
     }
-    func applyDataSourceSnapshot(hashableObjects: [ListObject], animatingDifferences: Bool = true) {
+    public func applyDataSourceSnapshot(hashableObjects: [ListObject], animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections([""])
         snapshot.appendItems(hashableObjects)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+    }
+    // MARK: - Subscription
+    func sinkDefaultObjects(viewController: UIViewController) {
+        sinkErrorMessage(viewController: viewController)
+        sinkHashableObjects(viewController: viewController)
+    }
+    private func sinkErrorMessage(viewController: UIViewController) {
+        errorMessage
+            .receive(on: DispatchQueue.main)
+            .sink { errorMessage in
+                viewController.presentErrorAlertController(message: errorMessage)
+            }
+            .store(in: &anyCancellables)
+    }
+    private func sinkHashableObjects(viewController: UIViewController) {
+        hashableObjects
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.applyDataSourceSnapshot()
+            }
+            .store(in: &anyCancellables)
     }
 }

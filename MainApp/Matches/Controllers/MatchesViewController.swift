@@ -7,15 +7,17 @@
 
 import UIKit
 import Combine
+import FootballUI
 
-final class MatchesViewController: UIViewController {
+final class MatchesViewController: UICollectionViewController {
     // MARK: - Properties
     private let viewModel: MatchesViewModel
+    private lazy var matchesUIHandler = MatchesUIHandler(collectionView: collectionView)
     private var anyCancellables = Set<AnyCancellable>()
     // MARK: - Init
     init(viewModel: MatchesViewModel = MatchesViewModel()) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(collectionViewLayout: ListCollectionLayout.defaultCollectionViewLayout)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -43,10 +45,5 @@ final class MatchesViewController: UIViewController {
             // Load data
         }
         .store(in: &anyCancellables)
-    }
-}
-// MARK: - MatchesUIHandler
-extension MatchesViewController: MatchesUIHandler {
-    func getAllUIs() {
     }
 }

@@ -8,5 +8,5 @@
 import UIKit
 import FootballCore
 
-final class MatchesUIHandler: CollectionUIHandler<Match> {
+public final class MatchesUIHandler: CollectionUIHandler<Team> {
 }

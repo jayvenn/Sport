@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     func presentErrorAlertController(title: String = "Error", message: String, completion: ((UIAlertAction) -> Void)? = nil) {
         let alertController = UIAlertController(
             title: title, message: message, preferredStyle: .alert)
