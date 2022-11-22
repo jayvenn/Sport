@@ -9,8 +9,9 @@ import UIKit
 import FootballCore
 
 final class MatchesUIHandler: CollectionUIHandler {
-    // MARK: - Value Types
     typealias ListObject = Match
+    
+    // MARK: - Value Types
     // MARK: - Properties
     let collectionView: UICollectionView
     var cellConfiguration: CellConfiguration?
@@ -29,7 +30,7 @@ final class MatchesUIHandler: CollectionUIHandler {
     }()
     lazy var dataSource: DataSource = {
         let listCellRegistration = UICollectionView.CellRegistration
-        <UICollectionViewListCell, ListObject> { [weak self] cell, _, object in
+        <UICollectionViewListCell, String> { [weak self] cell, _, object in
             guard let cellConfiguration = self?.cellConfiguration else { return }
             cellConfiguration(cell, object)
         }

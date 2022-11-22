@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol CollectionUIHandler {
-    associatedtype ListObject: Hashable
-    typealias Snapshot = NSDiffableDataSourceSnapshot<String, ListObject>
-    typealias DataSource = UICollectionViewDiffableDataSource<String, ListObject>
-    typealias CellConfiguration = (UICollectionViewListCell, ListObject) -> Void
-    typealias DequeueCellOperation = (UICollectionView, IndexPath, ListObject) -> UICollectionViewListCell?
+protocol CollectionUIHandler: AnyObject {
+//    associatedtype ListObject: Hashable
+    typealias Snapshot = NSDiffableDataSourceSnapshot<String, String>
+    typealias DataSource = UICollectionViewDiffableDataSource<String, String>
+    typealias CellConfiguration = (UICollectionViewListCell, String) -> Void
+    typealias DequeueCellOperation = (UICollectionView, IndexPath, String) -> UICollectionViewListCell?
     var collectionView: UICollectionView { get }
 }
