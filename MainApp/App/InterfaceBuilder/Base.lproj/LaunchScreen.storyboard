@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.soccer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Znv-FP-74Y">
-                                <rect key="frame" x="88" y="229.33333333333334" width="217" height="217.99999999999997"/>
+                                <rect key="frame" x="88" y="230.66666666666666" width="217" height="215.66666666666666"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Znv-FP-74Y" secondAttribute="height" multiplier="1:1" id="15J-EX-bHk"/>
                                 </constraints>
