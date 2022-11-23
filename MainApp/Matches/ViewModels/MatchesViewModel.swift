@@ -19,19 +19,26 @@ final class MatchesViewModel {
         guard let matchesAPIResponse = matchesAPIResponse else {
             return []
         }
-        let matches = self.isUpcoming
+        var matches = self.isUpcoming
         ? matchesAPIResponse.matches.upcoming
         : matchesAPIResponse.matches.previous
+        if let teamFilter = teamFilter {
+            matches = matches.filter {
+                $0.home == teamFilter.name || $0.away == teamFilter.name
+            }
+        }
         return matches
     }
+    var teamFilter: Team?
     var isUpcoming = true {
         didSet {
             matchesSubject.send(presentingMatches)
         }
     }
     // MARK: - Init
-    init(apiClient: MatchesFetchable = MatchesAPIClient()) {
+    init(apiClient: MatchesFetchable = MatchesAPIClient(), teamFilter: Team? = nil) {
         self.apiClient = apiClient
+        self.teamFilter = teamFilter
     }
     // MARK: - Methods
     func fetchMatches() {

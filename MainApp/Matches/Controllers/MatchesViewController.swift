@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 import FootballUI
+import FootballCore
 
 final class MatchesViewController: UICollectionViewController {
     // MARK: - UI Properties
@@ -58,7 +59,6 @@ final class MatchesViewController: UICollectionViewController {
     // MARK: - Actions
     @objc func segmentedValueChanged(_ sender: UISegmentedControl) {
         viewModel.isUpcoming = sender.selectedSegmentIndex == 0
-        print("Selected Segment Index is : \(sender.selectedSegmentIndex)")
     }
 }
 // MARK: - UICollectionViewDelegate

@@ -50,6 +50,11 @@ final class TeamsViewController: UICollectionViewController {
 // MARK: - UICollectionViewDelegate
 extension TeamsViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        teamsUIHandler.selectItemAtIndexPath(indexPath, viewController: self, hashableObjects: viewModel.teamsSubject.value)
+        let teams = viewModel.teamsSubject.value
+        teamsUIHandler.selectItemAtIndexPath(indexPath, viewController: self, hashableObjects: teams)
+        let team = teams[indexPath.item]
+        let vc = MatchesViewController(viewModel: MatchesViewModel(teamFilter: team))
+        let navigationController = makeNavigationController(vc, title: team.name)
+        present(navigationController, animated: true)
     }
 }

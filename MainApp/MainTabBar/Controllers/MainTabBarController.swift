@@ -30,18 +30,18 @@ final class MainTabBarController: UITabBarController {
         ]
     }
     // MARK: - Helpers
-    private func makeNavigationController(
-        _ viewController: UIViewController,
-        title: String,
-        image: UIImage?
-    ) -> UINavigationController {
-        let navigationController = UINavigationController(
-            rootViewController: viewController
-        )
-        navigationController.tabBarItem.title = title
-        navigationController.tabBarItem.image = image
-        navigationController.navigationBar.prefersLargeTitles = true
-        viewController.navigationItem.title = title
-        return navigationController
-    }
+}
+func makeNavigationController(
+    _ viewController: UIViewController,
+    title: String,
+    image: UIImage? = nil
+) -> UINavigationController {
+    let navigationController = UINavigationController(
+        rootViewController: viewController
+    )
+    navigationController.tabBarItem.title = title
+    navigationController.tabBarItem.image = image
+    navigationController.navigationBar.prefersLargeTitles = true
+    viewController.navigationItem.title = title
+    return navigationController
 }
