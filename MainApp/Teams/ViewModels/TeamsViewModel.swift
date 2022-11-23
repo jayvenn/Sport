@@ -13,13 +13,13 @@ final class TeamsViewModel {
     // MARK: - Properties
     private var anyCancellables = Set<AnyCancellable>()
     private let apiClient: TeamsFetchable
-    let teamsSubject = PassthroughSubject<TeamsAPIResponse, Error>()
+    let teamsSubject = CurrentValueSubject<[Team], Error>([])
     // MARK: - Init
     init(apiClient: TeamsFetchable = TeamsAPIClient()) {
         self.apiClient = apiClient
     }
     // MARK: - Methods
-    func fetchMatches() {
+    func fetchTeams() {
         apiClient.getTeams().sink { [weak self] status in
             switch status {
             case .finished:
@@ -27,8 +27,8 @@ final class TeamsViewModel {
             case .failure(let error):
                 self?.teamsSubject.send(completion: .failure(error))
             }
-        } receiveValue: { [weak self] response in
-            self?.teamsSubject.send(response)
+        } receiveValue: { [weak self] teamsAPIResponse in
+            self?.teamsSubject.send(teamsAPIResponse.teams)
         }
         .store(in: &anyCancellables)
     }

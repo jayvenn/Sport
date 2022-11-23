@@ -9,7 +9,7 @@ import UIKit
 import Combine
 import FootballUI
 
-final class TeamsViewController: UIViewController {
+final class TeamsViewController: UICollectionViewController {
     // MARK: - Properties
     private let viewModel: TeamsViewModel
     private lazy var teamsUIHandler = TeamsUIHandler(collectionView: collectionView)
@@ -17,7 +17,7 @@ final class TeamsViewController: UIViewController {
     // MARK: - Init
     init(viewModel: TeamsViewModel = TeamsViewModel()) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(collectionViewLayout: ListCollectionLayout.defaultCollectionViewLayout)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -25,6 +25,31 @@ final class TeamsViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchMatches()
+        sinkTeamsSubject()
+        viewModel.fetchTeams()
+    }
+    // MARK: - Overheads
+    private func sinkTeamsSubject() {
+        viewModel.teamsSubject.sink { [weak self] completion in
+            switch completion {
+            case .finished:
+                break
+            case .failure(let error):
+                self?.presentErrorAlertController(
+                    message: error.localizedDescription
+                )
+            }
+        } receiveValue: { [weak self] teams in
+            self?.teamsUIHandler.applyDataSourceSnapshot(
+                hashableObjects: teams
+            )
+        }
+        .store(in: &anyCancellables)
+    }
+}
+// MARK: - UICollectionViewDelegate
+extension TeamsViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        teamsUIHandler.selectItemAtIndexPath(indexPath, viewController: self, hashableObjects: viewModel.teamsSubject.value)
     }
 }

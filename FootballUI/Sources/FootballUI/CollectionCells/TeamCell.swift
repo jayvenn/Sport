@@ -7,8 +7,9 @@
 
 import UIKit
 import FootballCore
+import SDWebImage
 
-final class TeamCollectionViewCell: UICollectionViewListCell {
+public final class TeamCollectionViewCell: UICollectionViewListCell {
     // MARK: - Properties
     private func defaultListContentConfiguration() -> UIListContentConfiguration { .cell() }
     private lazy var listContentView = UIListContentView(configuration: defaultListContentConfiguration())
@@ -26,7 +27,7 @@ final class TeamCollectionViewCell: UICollectionViewListCell {
         team = newTeam
         setNeedsUpdateConfiguration()
     }
-    override var configurationState: UICellConfigurationState {
+    public override var configurationState: UICellConfigurationState {
         var state = super.configurationState
         state.team = team
         return state
@@ -61,8 +62,8 @@ final class TeamCollectionViewCell: UICollectionViewListCell {
         self.customViewConstraints = customViewConstraints
     }
     // MARK: - Cell Configurations
-    override func updateConfiguration(using state: UICellConfigurationState) {
-        guard let user = state.team else { return }
+    public override func updateConfiguration(using state: UICellConfigurationState) {
+        guard let team = state.team else { return }
         setupViewsIfNeeded()
         var content = defaultListContentConfiguration()
             .updated(for: state)
@@ -70,7 +71,7 @@ final class TeamCollectionViewCell: UICollectionViewListCell {
             .init(font: content.textProperties.font, scale: .large)
         content.axesPreservingSuperviewLayoutMargins = []
         let valueConfiguration = UIListContentConfiguration.valueCell().updated(for: state)
-        profileImageView.sd_setImage(with: user.logo)
+        profileImageView.sd_setImage(with: team.logo)
         profileImageView.preferredSymbolConfiguration = UIImage.SymbolConfiguration(
             font: valueConfiguration.secondaryTextProperties.font,
             scale: .small

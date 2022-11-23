@@ -8,7 +8,10 @@
 import UIKit
 import Combine
 
-public class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
+public class CollectionUIHandler<
+    ListObject: Hashable,
+    Cell: UICollectionViewListCell
+>: CollectionUILoadable {
     // MARK: - Properties
     public let collectionView: UICollectionView
     public var cellConfiguration: CellConfiguration?
@@ -19,7 +22,7 @@ public class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
     private var anyCancellables = Set<AnyCancellable>()
     lazy var dataSource: DataSource = {
         let listCellRegistration = UICollectionView.CellRegistration
-        <UICollectionViewListCell, ListObject> { [weak self] cell, _, object in
+        <Cell, ListObject> { [weak self] cell, _, object in
             guard let cellConfiguration = self?.cellConfiguration else { return }
             cellConfiguration(cell, object)
         }

@@ -14,9 +14,19 @@ final class MatchesViewModel {
     private var anyCancellables = Set<AnyCancellable>()
     private let apiClient: MatchesFetchable
     let matchesSubject = CurrentValueSubject<[Match], Error>([])
+    private var matchesAPIResponse: MatchesAPIResponse?
+    private var presentingMatches: [Match] {
+        guard let matchesAPIResponse = matchesAPIResponse else {
+            return []
+        }
+        let matches = self.isUpcoming
+        ? matchesAPIResponse.matches.upcoming
+        : matchesAPIResponse.matches.previous
+        return matches
+    }
     var isUpcoming = true {
         didSet {
-            fetchMatches()
+            matchesSubject.send(presentingMatches)
         }
     }
     // MARK: - Init
@@ -34,10 +44,8 @@ final class MatchesViewModel {
             }
         } receiveValue: { [weak self] matchesAPIResponse in
             guard let self = self else { return }
-            let matches = self.isUpcoming
-            ? matchesAPIResponse.matches.upcoming
-            : matchesAPIResponse.matches.previous
-            self.matchesSubject.send(matches)
+            self.matchesAPIResponse = matchesAPIResponse
+            self.matchesSubject.send(self.presentingMatches)
         }
         .store(in: &anyCancellables)
     }

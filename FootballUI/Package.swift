@@ -16,7 +16,8 @@ let package = Package(
             targets: ["FootballUI"]),
     ],
     dependencies: [
-        .package(name: "FootballCore", path: "./FootballCore")
+        .package(name: "FootballCore", path: "./FootballCore"),
+        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.1.4")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -25,7 +26,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "FootballUI",
-            dependencies: []),
+            dependencies: ["SDWebImage", "FootballCore"]),
         .testTarget(
             name: "FootballUITests",
             dependencies: ["FootballUI"]),

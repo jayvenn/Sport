@@ -9,7 +9,9 @@ import UIKit
 import FootballCore
 import AVKit
 
-public final class MatchesUIHandler: CollectionUIHandler<Match> {
+public final class MatchesUIHandler:
+    CollectionUIHandler<Match, UICollectionViewListCell>
+{
     // MARK: - Properties
     private let playerViewController = AVPlayerViewController()
     // MARK: - Initializers
