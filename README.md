@@ -1,2 +1,2 @@
-# Sport
- Demo iOS Sport Project
+# Sport - iOS Demo Project
+
