@@ -8,9 +8,9 @@
 import UIKit
 
 public struct ListCollectionLayout {
-    public static let defaultCollectionViewLayout: UICollectionViewLayout = {
+    public static var defaultCollectionViewLayout: UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { _, layoutEnvironment -> NSCollectionLayoutSection? in
-            var listConfiguration = UICollectionLayoutListConfiguration(
+            let listConfiguration = UICollectionLayoutListConfiguration(
                 appearance: .insetGrouped
             )
             let listCollectionLayoutSection = NSCollectionLayoutSection.list(
@@ -19,5 +19,5 @@ public struct ListCollectionLayout {
             return listCollectionLayoutSection
         }
         return layout
-    }()
+    }
 }
