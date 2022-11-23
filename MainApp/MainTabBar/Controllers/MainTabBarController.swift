@@ -25,7 +25,7 @@ final class MainTabBarController: UITabBarController {
             makeNavigationController(
                 TeamsViewController(),
                 title: "Teams",
-                image: UIImage(systemName: "figure.soccer")
+                image: UIImage(systemName: "person.3.fill")
             )
         ]
     }
