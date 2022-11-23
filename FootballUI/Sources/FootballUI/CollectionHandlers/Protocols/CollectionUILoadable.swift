@@ -13,5 +13,6 @@ public protocol CollectionUILoadable: AnyObject {
     typealias DataSource = UICollectionViewDiffableDataSource<String, ListObject>
     typealias CellConfiguration = (UICollectionViewListCell, ListObject) -> Void
     typealias DequeueCellOperation = (UICollectionView, IndexPath, ListObject) -> UICollectionViewListCell?
+    typealias CollectionViewItemAction = (UIViewController, UICollectionView, IndexPath, [ListObject]) -> Void
     var collectionView: UICollectionView { get }
 }

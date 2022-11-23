@@ -7,10 +7,12 @@
 
 import UIKit
 import Combine
+import FootballUI
 
 final class TeamsViewController: UIViewController {
     // MARK: - Properties
     private let viewModel: TeamsViewModel
+    private lazy var teamsUIHandler = TeamsUIHandler(collectionView: collectionView)
     private var anyCancellables = Set<AnyCancellable>()
     // MARK: - Init
     init(viewModel: TeamsViewModel = TeamsViewModel()) {

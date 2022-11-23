@@ -13,8 +13,12 @@ final class MatchesViewModel {
     // MARK: - Properties
     private var anyCancellables = Set<AnyCancellable>()
     private let apiClient: MatchesFetchable
-    let matchesSubject = PassthroughSubject<[Match], Error>()
-    var isUpcoming = true
+    let matchesSubject = CurrentValueSubject<[Match], Error>([])
+    var isUpcoming = true {
+        didSet {
+            fetchMatches()
+        }
+    }
     // MARK: - Init
     init(apiClient: MatchesFetchable = MatchesAPIClient()) {
         self.apiClient = apiClient

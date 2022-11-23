@@ -12,6 +12,7 @@ public class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
     // MARK: - Properties
     public let collectionView: UICollectionView
     public var cellConfiguration: CellConfiguration?
+    public var collectionViewItemAction: CollectionViewItemAction?
     public var dequeueHeaderCellOperation: DequeueCellOperation?
     private(set) var hashableObjects = CurrentValueSubject<[ListObject], Never>([])
     private(set) var errorMessage = PassthroughSubject<String, Never>()
@@ -39,34 +40,15 @@ public class CollectionUIHandler<ListObject: Hashable>: CollectionUILoadable {
         self.collectionView = collectionView
     }
     // MARK: - Data Source
-    public func applyDataSourceSnapshot(animatingDifferences: Bool = true) {
-        applyDataSourceSnapshot(hashableObjects: hashableObjects.value, animatingDifferences: animatingDifferences)
-    }
     public func applyDataSourceSnapshot(hashableObjects: [ListObject], animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections([""])
         snapshot.appendItems(hashableObjects)
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
-    // MARK: - Subscription
-    public func sinkDefaultObjects(viewController: UIViewController) {
-        sinkErrorMessage(viewController: viewController)
-        sinkHashableObjects(viewController: viewController)
-    }
-    private func sinkErrorMessage(viewController: UIViewController) {
-        errorMessage
-            .receive(on: DispatchQueue.main)
-            .sink { errorMessage in
-                viewController.presentErrorAlertController(message: errorMessage)
-            }
-            .store(in: &anyCancellables)
-    }
-    private func sinkHashableObjects(viewController: UIViewController) {
-        hashableObjects
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
-                self?.applyDataSourceSnapshot()
-            }
-            .store(in: &anyCancellables)
+    // MARK: - Actions
+    public func selectItemAtIndexPath(_ indexPath: IndexPath, viewController: UIViewController, hashableObjects: [ListObject]) {
+        guard let collectionViewItemAction = collectionViewItemAction else { return }
+        collectionViewItemAction(viewController, collectionView, indexPath, hashableObjects)
     }
 }

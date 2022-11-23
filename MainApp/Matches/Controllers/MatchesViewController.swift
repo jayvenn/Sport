@@ -28,7 +28,6 @@ final class MatchesViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        matchesUIHandler.sinkDefaultObjects(viewController: self)
         sinkMatchesSubject()
         viewModel.fetchMatches()
     }
@@ -60,5 +59,11 @@ final class MatchesViewController: UICollectionViewController {
     @objc func segmentedValueChanged(_ sender: UISegmentedControl) {
         viewModel.isUpcoming = sender.selectedSegmentIndex == 0
         print("Selected Segment Index is : \(sender.selectedSegmentIndex)")
+    }
+}
+// MARK: - UICollectionViewDelegate
+extension MatchesViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        matchesUIHandler.selectItemAtIndexPath(indexPath, viewController: self, hashableObjects: viewModel.matchesSubject.value)
     }
 }
