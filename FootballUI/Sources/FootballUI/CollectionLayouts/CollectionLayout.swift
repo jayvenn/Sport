@@ -8,10 +8,10 @@
 import UIKit
 
 public struct ListCollectionLayout {
-    public static var defaultCollectionViewLayout: UICollectionViewLayout {
+    public static func make(_ appearance: UICollectionLayoutListConfiguration.Appearance) -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { _, layoutEnvironment -> NSCollectionLayoutSection? in
             let listConfiguration = UICollectionLayoutListConfiguration(
-                appearance: .insetGrouped
+                appearance: appearance
             )
             let listCollectionLayoutSection = NSCollectionLayoutSection.list(
                 using: listConfiguration, layoutEnvironment: layoutEnvironment

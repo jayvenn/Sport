@@ -17,7 +17,7 @@ final class TeamsViewController: UICollectionViewController {
     // MARK: - Init
     init(viewModel: TeamsViewModel = TeamsViewModel()) {
         self.viewModel = viewModel
-        super.init(collectionViewLayout: ListCollectionLayout.defaultCollectionViewLayout)
+        super.init(collectionViewLayout: ListCollectionLayout.make(.plain))
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
